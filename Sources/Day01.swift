@@ -1,10 +1,8 @@
 import Algorithms
 
 struct Day01: AdventDay {
-    // Save your data in a corresponding text file in the `Data` directory.
     var data: String
 
-    // Replace this with your solution for the first part of the day's challenge.
     func part1() -> Any {
         data.split(separator: "\n").compactMap { line in
             guard let first = line.first(where: { $0.isNumber }),
@@ -15,7 +13,6 @@ struct Day01: AdventDay {
         }.reduce(0, +)
     }
 
-    // Replace this with your solution for the second part of the day's challenge.
     func part2() -> Any {
         let digits = ["one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"]
         func findInt(line: Substring, reversed: Bool) -> String? {
