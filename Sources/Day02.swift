@@ -80,7 +80,7 @@ struct Day02: AdventDay {
             guard let minBlue = game.pulls.map({ $0.blue }).max(),
                   let minRed = game.pulls.map({ $0.red }).max(),
                   let minGreen = game.pulls.map({ $0.green }).max() else {
-                    return nil
+                return nil
             }
 
             return Game.Pull(blue: minBlue, red: minRed, green: minGreen)
@@ -92,15 +92,15 @@ struct Day02: AdventDay {
 
         return powers.reduce(0, +)
     }
-}
 
-struct Game {
-    let id: Int
-    var pulls: [Pull] = []
+    struct Game {
+        let id: Int
+        var pulls: [Pull] = []
 
-    struct Pull {
-        var blue: Int
-        var red: Int
-        var green: Int
+        struct Pull {
+            var blue: Int
+            var red: Int
+            var green: Int
+        }
     }
 }
