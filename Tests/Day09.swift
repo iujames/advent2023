@@ -2,7 +2,7 @@ import XCTest
 
 @testable import AdventOfCode
 
-final class Day098Tests: XCTestCase {
+final class Day09Tests: XCTestCase {
 
     func testPart1() throws {
         let testData = """
